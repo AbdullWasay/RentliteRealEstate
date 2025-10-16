@@ -37,9 +37,15 @@
 }
 
 .flaticon-piggy-bank:before { content: "\f100"; }
-.flaticon-wallet:before { content: "\f101"; }
+.flaticon-broker:before { content: "\f101"; }
 .flaticon-file:before { content: "\f102"; }
-.flaticon-locked:before { content: "\f103"; }
+.flaticon-camera:before { content: "\f103"; }
 .flaticon-bed:before { content: "\f104"; }
 .flaticon-bathtub:before { content: "\f105"; }
 .flaticon-floor-plan:before { content: "\f106"; }
+.flaticon-handshake:before { content: "\f107"; }
+.flaticon-home:before { content: "\f108"; }
+.flaticon-search:before { content: "\f109"; }
+.flaticon-cogs:before { content: "\f10a"; }
+.flaticon-paint-brush:before { content: "\f10b"; }
+.flaticon-heart:before { content: "\f10c"; }
