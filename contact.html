@@ -33,7 +33,7 @@
 	    <div class="container">
 	      <a class="navbar-brand d-flex align-items-center" href="index.html">
 	        <span class="logo-icon mr-2" style="width: 35px; height: 35px; background: linear-gradient(135deg, #d4ca68, #e6d875); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 900; font-size: 18px; font-family: 'Orbitron', monospace; box-shadow: 0 4px 12px rgba(212, 202, 104, 0.4);">R</span>
-	        <span style="font-family: 'Orbitron', monospace; font-weight: 700; font-size: 1.4rem; color: white; letter-spacing: 1px;">Rentlite</span>
+	        <span style="font-family: 'Orbitron', monospace; font-weight: 700; font-size: 1.4rem; color: rgb(0, 0, 0); letter-spacing: 1px;">Rentlite</span>
 	      </a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
@@ -94,35 +94,39 @@
         </div>
         <div class="row block-9 justify-content-center mb-5">
           <div class="col-md-6 align-items-stretch d-flex">
-            <form action="#" class="bg-light p-5 contact-form">
+            <form action="https://formspree.io/f/xgvndbdk" method="POST" class="bg-light p-5 contact-form">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name">
+                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Email">
+                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject">
+                <input type="text" name="subject" class="form-control" placeholder="Subject" required>
               </div>
               <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Message" required></textarea>
               </div>
               <div class="form-group">
                 <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
               </div>
+              <!-- Formspree hidden fields -->
+              <input type="hidden" name="_subject" value="New Contact Form Submission from Rentlite Website">
+              <input type="hidden" name="_next" value="thank-you.html">
+              <input type="hidden" name="_captcha" value="false">
             </form>
           </div>
           <div class="col-md-6 align-items-stretch d-flex">
-        		<div id="map" class="bg-white border" style="width: 100%; height: 100%; min-height: 400px;">
-        		  <iframe
-        		    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.2234567890123!2d-0.0956!3d51.5287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ca9b3f3f3f3%3A0x1234567890abcdef!2s20-22%20Wenlock%20Rd%2C%20London%20N1%207GU%2C%20UK!5e0!3m2!1sen!2suk!4v1234567890123!5m2!1sen!2suk"
-        		    width="100%"
-        		    height="100%"
-        		    style="border:0; border-radius: 10px;"
-        		    allowfullscreen=""
-        		    loading="lazy"
-        		    referrerpolicy="no-referrer-when-downgrade">
-        		  </iframe>
+        		<div class="bg-white border" style="width: 100%; height: 100%; min-height: 400px;">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.049715468107!2d-0.09612862352859879!3d51.53064797181873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ca7548b9813%3A0xdd386d3d0f1ebc30!2s20-22%20Wenlock%20Rd%2C%20London%20N1%207GU%2C%20UK!5e0!3m2!1sen!2s!4v1760778048748!5m2!1sen!2s"
+                width="100%"
+                height="100%"
+                style="border:0; border-radius: 10px; min-height: 400px;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
         		</div>
           </div>
         </div>
@@ -220,8 +224,7 @@
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
+  <!-- Google Maps JavaScript API removed - using iframe embed instead -->
   <script src="js/main.js"></script>
     
   </body>
